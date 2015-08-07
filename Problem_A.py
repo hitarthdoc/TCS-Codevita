@@ -11,20 +11,27 @@ for i in range(0, N):
 
     elif F > B:
         while current != FD:
+            print("W", FD, current, current - FD, time)
             if (current + F) < FD:
-                current += (F - B)
-                time = (F + B) * T
+                print("I", FD, current, current - FD, time)
+                current = current + (F - B)
+                time = time + ((F + B) * T)
             else:
-                current = current + (F - (current - FD))
-                time = (F - (current - FD)) * T
+                print("E1", FD, current, current - FD, time)
+                time = time - ((current - FD) * T)
+                current = FD
         print(time, "F")
     
     else:
         while current != BD:
-            if B > (current - BD):
-                current += (F - B)
-                time = (F + B) * T
+            print("W2", BD, current, current - BD, current + F - B, time)
+            if (current + (F - B)) > (-BD):
+                print("I", BD, current, current - BD, time)
+                current = current + (F - B)
+                time = time + ((F + B) * T)
             else:
-                current = current + (F - B + (current - BD))
-                time = (F - B + (current - FD)) * T
+                print("E2", FD, current, current + BD, time)
+                print( ( ( (current + BD) + (B - (current + BD) + B) ) * T) )
+                time = time + (( (current + BD) + F) * T)
+                current = BD
         print(time, "B")
