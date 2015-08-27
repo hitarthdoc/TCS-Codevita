@@ -1,15 +1,17 @@
 def insect(lst, t):
     # print(t)
-
+    ans = lst
+    abc = []
+    
     if t != 0:
 
         t = t - 1
 
         lst.sort()
-        # print( lst)
+        print("skdfhgshsekjrhnge", lst)
 
-        abc = []
 
+        xy = []
         for i in range(0, len(lst) ):
 
             print("\nsjdhgf", i)
@@ -23,8 +25,11 @@ def insect(lst, t):
 
                     a = lst[i] + lst[j]
                     print(a)
-                    abc[ len(abc): ] = [a]
-                    
+                    xy.append(a)
+
+                    print("\ndlrjhghjgjkngkjsdngjkn", xy)
+                
+                abc.append(xy)
 
                 abc.append( lst[i] )
 
@@ -36,7 +41,7 @@ def insect(lst, t):
         return ans
 
     else:
-        return lst
+        return ans
 
 n = int(input())
 l = [ [] for x in range(n) ]   
@@ -46,7 +51,5 @@ for x in range(0,n):
         break
  
 
-a = insect( [2,5], 3 )
+a = insect( [2,5], 2 )
 print( a)
-
-
