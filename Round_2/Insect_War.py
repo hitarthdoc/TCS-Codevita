@@ -1,4 +1,11 @@
-def insect(lst, t):
+n = int(input())
+l = [ [] for x in range(n) ]   
+for x in range(0,n):
+	l[x] = list(map(int,input().split()))
+ 	if (0 < l[x][0] && l[x][0] < l[x][1] && l[x][1] <10000001):
+ 		break:
+ 
+ def insect(lst, t):
     # print(t)
 
     if t != 0:
