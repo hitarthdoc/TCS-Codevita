@@ -33,7 +33,7 @@ for i in range(0, N):
 		else:
 			total_distance_travelled = ( (F + B) * turns )
 
-		print (total_distance_travelled, dist_per_turn, turns, last_position, delta_dist)
+# 		print (total_distance_travelled, dist_per_turn, turns, last_position, delta_dist)
 		print (total_distance_travelled * T, "F")
 	elif direction == -1:
 		dist_per_turn = B - F
@@ -45,7 +45,7 @@ for i in range(0, N):
 		else:
 			total_distance_travelled = ( (F + B) * turns )
 			
-		print (total_distance_travelled, dist_per_turn, turns, last_position, delta_dist)
+# 		print (total_distance_travelled, dist_per_turn, turns, last_position, delta_dist)
 		print (total_distance_travelled * T, "B")
 
 	# else:
